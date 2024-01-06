@@ -21,17 +21,17 @@ body {
   .about { text-align: center;
 }
 }
-.container {
+.tasks {
   display: block;
   width: 500px;
   margin: 0 auto 0;
 }
-.container__task {
+.tasks__task {
   width: 56%;
   display: inline-block;
   flex-grow: 1
 }
-.container__add-task {
+.tasks__add-task {
   display: flex;
 }
 ul {
@@ -118,12 +118,12 @@ li > label {
 li >    input[type="text"] {
   width: 226px
 }
-button.container__delete img {
+button.tasks__delete img {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
-button.container__delete img:hover {
+button.tasks__delete img:hover {
   transform: rotateZ(0);
 }
 
@@ -138,11 +138,11 @@ ul li input[type=text] {
   display:none
 }
 
-ul li.container__edit-mode input[type=text] {
+ul li.tasks__edit-mode input[type=text] {
   display:inline-block;
   width:224px
 }
 
-ul li.container__edit-mode label {
+ul li.tasks__edit-mode label {
   display:none;
 }

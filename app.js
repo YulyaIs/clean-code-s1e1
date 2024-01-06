@@ -33,17 +33,17 @@ var createNewTaskElement=function(taskString){
     var deleteButtonImg=document.createElement("img");//delete button image
 
     label.innerText=taskString;
-    label.className='container__task';
+    label.className='tasks__task';
 
     //Each elements, needs appending
     checkBox.type="checkbox";
     editInput.type="text";
-    editInput.className="container__task";
+    editInput.className="tasks__task";
 
     editButton.innerText="Edit"; //innerText encodes special characters, HTML does not.
-    editButton.className="container__edit";
+    editButton.className="tasks__edit";
 
-    deleteButton.className="container__delete";
+    deleteButton.className="tasks__delete";
     deleteButtonImg.src='./remove.svg';
     deleteButton.appendChild(deleteButtonImg);
 
@@ -84,8 +84,8 @@ var editTask=function(){
 
     var editInput=listItem.querySelector('input[type=text]');
     var label=listItem.querySelector("label");
-    var editBtn=listItem.querySelector(".container__edit");
-    var containsClass=listItem.classList.contains("container__edit-mode");
+    var editBtn=listItem.querySelector(".tasks__edit");
+    var containsClass=listItem.classList.contains("tasks__edit-mode");
     //If class of the parent is .editmode
     if(containsClass){
 
@@ -99,7 +99,7 @@ var editTask=function(){
     }
 
     //toggle .editmode on the parent.
-    listItem.classList.toggle("edit-mode");
+    listItem.classList.toggle("tasks__edit-mode");
 };
 
 
@@ -156,8 +156,8 @@ var bindTaskEvents=function(taskListItem,checkBoxEventHandler){
     console.log("bind list item events");
 //select ListItems children
     var checkBox=taskListItem.querySelector("input[type=checkbox]");
-    var editButton=taskListItem.querySelector("button.container__edit");
-    var deleteButton=taskListItem.querySelector("button.container__delete");
+    var editButton=taskListItem.querySelector("button.tasks__edit");
+    var deleteButton=taskListItem.querySelector("button.tasks__delete");
 
 
     //Bind editTask to edit button.
