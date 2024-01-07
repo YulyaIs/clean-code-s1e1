@@ -10,6 +10,10 @@
   display: block;
   text-align: right;
 }
+
+.about__figure {
+  margin: 0;
+}
 .about__img {
   width: 100%;
 }
